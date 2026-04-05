@@ -1,92 +1,97 @@
-# FinFlow — Personal Finance Dashboard
+# FinanceFlow — React Finance Dashboard
 
-🔗 Live Project: https://your-deployed-link.com
+🔗 Live Demo: https://your-vercel-link.vercel.app
 
-FinFlow is a simple personal finance dashboard that I built using **React and plain CSS**. The goal of this project was to create a clean and easy-to-use interface where users can track income and expenses, understand their spending habits, and get quick financial insights — all without needing any backend.
+FinanceFlow is a frontend-focused personal finance dashboard built using **React** and **plain CSS**. The application allows users to track income and expenses, analyze spending behavior, and view financial insights through interactive charts. The entire app runs client-side and uses **localStorage** for persistence, so no backend setup is required.
 
-The entire application runs in the browser and stores data locally, making it lightweight and fast.
-
----
-
-## Getting Started
-
-To run the project locally:
-
-```bash
-npm install
-npm start
-```
-
-This will start the development server at
-http://localhost:3000
+The main focus of this project was building a clean UI, structured state management, and modular reusable components without relying on UI libraries.
 
 ---
 
-## Production Build
-
-To generate an optimized production build:
-
-```bash
-npm run build
-```
-
-This creates a `build` folder that can be deployed on platforms like Netlify, Vercel, or GitHub Pages.
-
----
-
-## Features
+## Key Features
 
 * Dashboard with balance, income, expenses, and savings rate
-* Interactive charts to visualize spending and trends
-* Add, edit, and delete transactions
-* Search, filter, and sort functionality
-* Monthly insights and spending analysis
-* Dark and light mode toggle
-* Data persistence using localStorage
-* CSV export option
-* Responsive layout for mobile and desktop
-* Toast notifications for user actions
+* Interactive charts for spending and trends
+* Transaction management (add, edit, delete)
+* Search, filter, and sorting functionality
+* Monthly insights and category-wise analysis
+* Dark / Light theme toggle with persistence
+* CSV export support
+* Toast notifications
+* Responsive layout (mobile, tablet, desktop)
+* Role-based UI (Admin / Viewer)
+* LocalStorage data persistence
 
 ---
 
 ## Tech Stack
 
-* React
-* Plain CSS
-* Chart.js
-* React Context API
-* useReducer
+* React 18
+* Context API + useReducer (state management)
+* Chart.js + react-chartjs-2
+* Plain CSS with CSS variables
 * LocalStorage
-
-No external UI libraries were used. All components and styles were written from scratch.
+* Create React App
 
 ---
 
 ## Project Structure
 
 ```
-src
- ├── components
- ├── pages
- ├── context
- ├── data
- ├── utils
- ├── App.js
- └── index.js
+src/
+ ├── components/      # Reusable UI components
+ ├── pages/           # Dashboard, Transactions, Insights
+ ├── context/         # Global state management
+ ├── data/            # Seed transaction data
+ ├── utils.js         # Helper functions
+ ├── App.js           # Layout and routing
+ └── index.js         # Entry point
 ```
 
 ---
 
-## Deployment
+## Running Locally
 
-To deploy, simply run:
+```bash
+npm install
+npm start
+```
+
+Runs at: http://localhost:3000
+
+---
+
+## Production Build
 
 ```bash
 npm run build
 ```
 
-Then upload the `build` folder to any static hosting platform such as Netlify or Vercel.
+Creates optimized static files inside the `build` folder.
 
 ---
 
-This project was created to practice state management, reusable components, and building a responsive UI without relying on component libraries.
+## Deployment
+
+The project is deployed using **GitHub and Vercel**.
+
+* Code pushed to GitHub repository
+* Repository imported into Vercel
+* Vercel automatically builds using `npm run build`
+* Static files served via global CDN
+* Auto redeploy on every push
+
+---
+
+## Highlights
+
+* No backend required
+* No UI component libraries used
+* Modular component architecture
+* Optimized production build
+* Fully responsive design
+* Clean and minimal UI
+
+---
+
+This project was built to strengthen frontend architecture, state management using Context API, and building production-ready React applications without external UI frameworks.
