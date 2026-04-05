@@ -1,0 +1,71 @@
+/* ── Global Reset & Variables ───────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d0f14;
+  --bg2:       #13161e;
+  --bg3:       #1a1e28;
+  --card:      #181c26;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.13);
+  --text:      #f0ede6;
+  --muted:     #8a8fa0;
+  --accent:    #c8f55a;
+  --accent2:   #7b63f5;
+  --green:     #3ecf8e;
+  --red:       #f5566a;
+  --amber:     #f5a623;
+  --blue:      #4e9cf5;
+  --radius:    14px;
+  --radius-sm: 8px;
+  --sidebar-w: 240px;
+  --transition: 0.2s ease;
+}
+
+[data-theme="light"] {
+  --bg:      #f4f2ed;
+  --bg2:     #ede9e0;
+  --bg3:     #e2ddd4;
+  --card:    #ffffff;
+  --border:  rgba(0,0,0,0.07);
+  --border2: rgba(0,0,0,0.13);
+  --text:    #1a1c22;
+  --muted:   #6b7080;
+  --accent:  #4d8a00;
+  --accent2: #5a3ecf;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font-family: 'DM Sans', sans-serif; cursor: pointer; }
+input, select { font-family: 'DM Sans', sans-serif; }
+h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+/* ── Animations ─────────────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes toastIn {
+  from { transform: translateY(60px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes barFill {
+  from { width: 0; }
+}
